@@ -71,9 +71,9 @@ function App() {
           <input type="radio" name="gender" value="other" id="other" checked={gender === "other"} onChange={(e) => setGender(e.target.value)} />Other
 
           <label for="lang">Your best Subject</label>
-          <input type="checkbox" name="lang" id="english" checked={subjects.english === true} onChange={(e) => handleSubjectChange("english")} />
-          <input type="checkbox" name="lang" id="maths" checked={subjects.maths === true} onChange={(e) => handleSubjectChange("maths")} />
-          <input type="checkbox" name="lang" id="physics" checked={subjects.physics === true} onChange={(e) => handleSubjectChange("physics")} />
+          <input type="checkbox" name="lang" id="english" checked={subjects.english === true} onChange={(e) => handleSubjectChange("english")} />English
+          <input type="checkbox" name="lang" id="maths" checked={subjects.maths === true} onChange={(e) => handleSubjectChange("maths")} />Maths
+          <input type="checkbox" name="lang" id="physics" checked={subjects.physics === true} onChange={(e) => handleSubjectChange("physics")} />Physics
 
           <label for="file">Upload Resume</label>
           <input type="file" name="file" id="file" onChange={(e) => setResume(e.target.files[0])} placeholder="Upload File" required />
