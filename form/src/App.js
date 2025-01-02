@@ -78,7 +78,32 @@ function App() {
           <label for="file">Upload Resume</label>
           <input type="file" name="file" id="file" onChange={(e) => setResume(e.target.files[0])} placeholder="Upload File" required />
 
-          <label></label>
+          <label for="url">Enter URL</label>
+          <input type="url" name="url" id="url" onChange={(e) => setUrl(e.target.value)} placeholde="Enter url" required />
+
+          <label>Select your choice</label>
+          <select name="select" id="select" value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)}>
+            <option value="" disabled selected={selectedOption === ""}Select Your Ans></option>
+
+            <optgroup label="Beginers">
+              <option value="1">HTML</option>
+              <option value="2">CSS</option>
+              <option value="3">JavaScript</option>
+            </optgroup>
+
+            <optgroup label="Advanced">
+              <option value="4">React</option>
+              <option value="5">Node</option>
+              <option value="6">MongoDB</option>
+            </optgroup>
+          </select>
+
+          <label for="about">About</label>
+          <textarea name="about" id="about" cols="30" rows="10" onChange={(e) => setAbout(e.target.value)} placeholde="About youeself" required></textarea>
+
+          <button type="reset" value="reset" onClick={() => handleReset()}>Reset</button>
+
+          <button type="submit" value="submit" onClick={(e) => handleSubmit(e)}>Submit</button>
 
         </form>
       </fieldset>
